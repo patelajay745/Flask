@@ -1,0 +1,8 @@
+{
+    "params": {
+        "local_server": "True",
+        "prod_uri": "",
+        "dbname": "my_blog",
+        "linked_in": "https://www.linkedin.com/in/patelajay745/"
+    }
+}
