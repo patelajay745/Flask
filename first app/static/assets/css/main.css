@@ -1124,6 +1124,20 @@ section {
   margin-top: 25px;
 }
 
+.large-image {
+  width: 100%;
+  /* Adjust the width as needed */
+  height: auto;
+  /* Maintain aspect ratio */
+}
+
+.small-image {
+  width: 50%;
+  /* Adjust the width as needed */
+  height: auto;
+  /* Maintain aspect ratio */
+}
+
 .contact .php-email-form .sent-message {
   display: none;
   color: var(--color-white);

@@ -1,0 +1,48 @@
+{% extends "admin-layout.html" %}
+
+{% block body %}
+
+<div class="container mt-5">
+    <h2 class="mb-4">Post Dashboard</h2>
+
+    <!-- Table to display posts -->
+    <div class="table-responsive">
+        <table class="table table-bordered table-hover">
+            <thead class="thead-dark">
+                <tr>
+                    <th>ID</th>
+                    <th>Title</th>
+                    <th>Category</th>
+                    <th>Content</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Sample post data (replace this with dynamic data) -->
+
+
+                {% for post in posts %}
+                <tr>
+                    <td>{{post.id}}</td>
+                    <td>{{post.title}}</td>
+                    <td>{{post.category}}</td>
+                    <td>{{post.content[:50] | safe}}</td>
+                    <td>
+                        <!-- Edit button -->
+                        <a href="/edit/{{post.id}}" class="btn btn-warning btn-sm">Edit</a>
+
+                        <!-- Delete button -->
+                        <a href="/delete/{{post.id}}" class="btn btn-danger btn-sm ml-2">Delete</a>
+                    </td>
+                </tr>
+                {% endfor %}
+
+
+                <!-- Add more rows for additional posts -->
+
+            </tbody>
+        </table>
+    </div>
+</div>
+
+{% endblock %}

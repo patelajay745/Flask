@@ -1,0 +1,12 @@
+docker network create loginApp
+
+docker run --name mysql -e MYSQL_ROOT_PASSWORD=admin -d --network=loginApp mysql:latest
+
+docker run --name my-flask-app-container \
+    --network loginApp \
+    -p 5000:5000 \
+    -e DB_HOST=some-mysql \
+    -e DB_USER=root \
+    -e DB_PASSWORD=admin \
+    -e DB_NAME=login \
+    patelajay745/loginapp:v4
