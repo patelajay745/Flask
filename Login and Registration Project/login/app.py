@@ -9,6 +9,8 @@ app=Flask(__name__)
 
 app.secret_key='f5a1c200730b983ea35af4bbcff9748f'
 
+
+
 # Use environment variables for database configuration
 app.config['MYSQL_HOST'] = os.environ.get('DB_HOST', 'localhost')
 app.config['MYSQL_USER'] = os.environ.get('DB_USER', 'root')
