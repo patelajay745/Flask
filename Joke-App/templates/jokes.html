@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h1 class="text-3xl font-bold mb-4">Multiple Jokes</h1>
+<div class="bg-white p-6 rounded-lg shadow">
+    <ul>
+        {% for j in jokes %}
+        <li>{{ j }}</li>
+        {% endfor %}
+    </ul>
+</div>
+{% endblock %}

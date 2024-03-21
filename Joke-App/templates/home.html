@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h1 class="text-3xl font-bold mb-4">Random Joke</h1>
+<div class="bg-white p-6 rounded-lg shadow">
+    <div class="grid grid-cols-2 gap-4">
+        <div class="col-span-2 md:col-span-1">
+            <div class="bg-gray-100 p-4 rounded-lg">
+                <p>{{ joke }}</p>
+            </div>
+        </div>
+        <div class="col-span-2 md:col-span-1 flex justify-end items-center">
+            <form action="/" method="post" class="inline-block">
+                <input type="hidden" name="current_joke" value="{{ joke }}">
+
+                <button type="submit" name="action" value="next"
+                    class="bg-gray-800 text-white px-4 py-2 rounded-lg">Next Joke</button>
+            </form>
+        </div>
+    </div>
+</div>
+{% endblock %}
