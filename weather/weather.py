@@ -12,7 +12,7 @@ def weather():
     else:
         city='London,CA'
     
-    api ='a2a1e5c51d389f23db1888c87272b729'
+    api =''
 
     source = urllib.request.urlopen('http://api.openweathermap.org/data/2.5/weather?q=' + city + '&units=metric&appid=' + api).read()
 
