@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #f8f9fa;
+        }
+
+        .weather-card {
+            width: 400px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="weather-card">
+            <h2 class="text-center mb-4">Weather in {{ data.city }}</h2>
+            <div class="row">
+                <div class="col-6">Country Code:</div>
+                <div class="col-6">{{ data.country_code }}</div>
+            </div>
+            <div class="row">
+                <div class="col-6">Coordinates:</div>
+                <div class="col-6">{{ data.coordinate }}</div>
+            </div>
+            <div class="row">
+                <div class="col-6">Temperature:</div>
+                <div class="col-6">{{ data.temp }}</div>
+            </div>
+            <div class="row">
+                <div class="col-6">Pressure:</div>
+                <div class="col-6">{{ data.pressure }}</div>
+            </div>
+            <div class="row">
+                <div class="col-6">Humidity:</div>
+                <div class="col-6">{{ data.humidity }}</div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
